@@ -1,0 +1,30 @@
+{
+  "name": "biblenode",
+  "version": "0.0.1",
+  "description": "simple Bible bot for telegram (using nodejs)",
+  "main": "BibleNode.js",
+  "dependencies": {
+    "mysql": "^2.11.1",
+    "npm-latest": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rowan84/BibleNode.git"
+  },
+  "keywords": [
+    "bible",
+    "nodejs",
+    "bot",
+    "telegram"
+  ],
+  "author": "rowan84",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rowan84/BibleNode/issues"
+  },
+  "homepage": "https://github.com/rowan84/BibleNode#readme"
+}
