@@ -1,7 +1,9 @@
 const http = require('http');
 
-const hostname = '127.0.0.1';
-const port = 3000;
+
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 8080;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
@@ -10,5 +12,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+  console.log('Server running at http');
 });
