@@ -5,10 +5,11 @@
   "main": "BibleNode.js",
   "dependencies": {
     "mysql": "^2.11.1",
-    "npm-latest": "^1.0.2"
+    "npm-latest": "^1.0.2",
+    "telegram-node-bot": "^3.0.10"
   },
- "engines": {
-    "node": "4.2.6"
+  "engines": {
+    "node": "6.3.0"
   },
   "devDependencies": {},
   "scripts": {
