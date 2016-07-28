@@ -29,7 +29,7 @@ class BibleController extends TelegramBaseController {
      * @param {Scope} $
      */
     handle($) {
-    	entry = $.message();
+    	entry = $.query()[0];
     	
     	if(bibleRefRegex.test(entry))
     	{
