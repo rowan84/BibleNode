@@ -4,8 +4,11 @@ const Telegram = require('telegram-node-bot')
 const TelegramBaseController = Telegram.TelegramBaseController
 const tg = new Telegram.Telegram('145950702:AAFP2xrvD68yKHBnwXU-_xCb_cvcqxzQNMU')
 
+var bibleRefRegex = /(?:\d\s*)?[A-Z]?[a-z]+\s*\d+(?:[:-]\d+)?(?:\s*-\s*\d+)?(?::\d+|(?:\s*[A-Z]?[a-z]+\s*\d+:\d+))?/;
+
 class VerseController extends TelegramBaseController {
-    /**
+   
+	/**
      * @param {Scope} $
      */
     verseHandler($) {
@@ -26,7 +29,16 @@ class BibleController extends TelegramBaseController {
      * @param {Scope} $
      */
     handle($) {
-       $.sendMessage('hello that is an invalid entry...for Now');
+    	entry = $.message();
+    	
+    	if(bibleRefRegex.test(entry))
+    	{
+    		$.sendMessage('You have requested: ' + entry);
+    	}
+    	else
+    	{
+    		$.sendMessage('hello that is an invalid entry...for Now');
+    	}
     }
 }
 
