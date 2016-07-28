@@ -21,12 +21,21 @@ class VerseController extends TelegramBaseController {
     }
 }
 
+class BibleController extends TelegramBaseController {
+    /**
+     * @param {Scope} $
+     */
+    handle($) {
+       $.sendMessage('hello that is an invalid entry...for Now');
+    }
+}
+
 tg.router
     .when(['verse'], new VerseController())
-tg.router
     .when(['Verse'], new VerseController())
-tg.router
     .when(['VERSE'], new VerseController())
+    .otherwise(new BibleController())
+
 /*const http = require('http');
 
 
