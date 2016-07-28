@@ -30,7 +30,7 @@ class BibleController extends TelegramBaseController {
      */
     handle($) {
     	var entry = $.message.text;
-    	
+    	//check if entry matches a verse ref like John 3:16 for example
     	if(bibleRefRegex.test(entry))
     	{
     		$.sendMessage('You have requested: ' + entry);
