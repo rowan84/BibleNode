@@ -33,7 +33,7 @@ class BibleController extends TelegramBaseController {
     	//check if entry matches a verse ref like John 3:16 for example
     	if(bibleRefRegex.test(entry))
     	{
-    		$.sendMessage('You have requested: ' + entry);
+    		$.sendMessage('You have requested: ' + entry + ' - At this point in time this is all that the bot will respond with. Send verse for Roman 8:28 though :)');
     	}
     	else
     	{
